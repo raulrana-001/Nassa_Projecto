@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Monitorização · TerraWatch Angola</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"><link rel="stylesheet" href="../CSS/global.css?v=0.3"></head>
+<body data-page="monitorizacao" data-root="../" data-titulo="Monitorização"><div class="shell"><aside id="nav" class="nav"></aside><div class="col"><header id="topo" class="topo"></header><main><div class="aviso"><b>Nota científica:</b> uma alteração no sinal SAR não prova por si só desflorestação, incêndio ou inundação. Os resultados são indicadores compatíveis com alterações e exigem validação.</div><section class="grid-map"><form id="form" class="card painel"><h2>Nova análise</h2>
+<label>Região<select id="regiao"></select></label>
+<label>Fenómeno<select id="fenomeno"><option value="vegetacao">Alterações na vegetação</option><option value="zonas_humidas">Zonas húmidas e inundação</option></select></label>
+<label>Banda<select id="banda"><option>L</option><option>S</option></select></label>
+<label>Data inicial<input type="date" id="di" value="2026-01-01" required></label>
+<label>Data final<input type="date" id="df" value="2026-10-01" required></label>
+<button class="btn" type="submit">Executar análise</button></form>
+<div class="card mapwrap"><div id="mapa"></div></div></section>
+<section class="grid2"><article class="card"><h2>Resultado</h2><div id="estado" class="estado">Sem análise executada.</div><div class="cv"><canvas id="graf"></canvas></div></article>
+<article class="card"><h2>Observações disponíveis</h2><div id="obs" class="lista"></div>
+<div class="linha" style="margin-top:12px"><button class="btn sec" id="plano" type="button">Ver plano de dados</button><button class="btn" id="descarregar" type="button">Descarregar</button></div><p id="planoRes" class="nota"></p></article></section><section class="card"><h2>Dados SAR descarregados</h2><div id="locais" class="lista"></div><p id="vistaRes" class="nota"></p></section></main><footer class="rodape">TerraWatch Angola · front end v0.3 · Fontes: NASA NISAR, ASF, ISRO Bhoonidhi · Dados marcados DEMO são simulados</footer></div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="../JS/api.js?v=0.3"></script><script src="../JS/mapa.js?v=0.3"></script><script src="../JS/graficos.js?v=0.3"></script><script src="../JS/main.js?v=0.3"></script><script src="../JS/filtros.js?v=0.3"></script></body></html>

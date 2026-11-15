@@ -1,0 +1,43 @@
+:root{--bg:#090B0E;--sup:#151C25;--sup2:#1C2632;--az:#2563EB;--vd:#22C55E;--tx:#F8FAFC;--mu:#94A3B8;--bd:#263241;--am:#F59E0B}
+*{box-sizing:border-box;margin:0}
+body{font:15px/1.5 Inter,Roboto,system-ui,sans-serif;background:var(--bg);color:var(--tx)}
+a{color:var(--az)}
+.shell{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
+.col{display:flex;flex-direction:column;min-width:0}
+.nav{background:var(--sup);border-right:1px solid var(--bd);padding:20px 12px;display:flex;flex-direction:column;gap:4px;position:sticky;top:0;height:100vh}
+.logo{font-weight:800;letter-spacing:.1em;padding:4px 10px 18px;font-size:14px}.logo span{color:var(--az)}
+.nav a{color:var(--mu);text-decoration:none;padding:9px 12px;border-radius:8px}
+.nav a:hover{background:var(--sup2);color:var(--tx)}.nav a.on{background:var(--az);color:#fff}
+.topo{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 28px;border-bottom:1px solid var(--bd)}
+.topo h1{font-size:20px}
+main{padding:24px 28px;display:grid;gap:20px;flex:1;align-content:start}
+.rodape{padding:16px 28px;color:var(--mu);font-size:12px;border-top:1px solid var(--bd)}
+.card{background:var(--sup);border:1px solid var(--bd);border-radius:12px;padding:18px;min-width:0}
+.card h2{font-size:15px;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid-map{display:grid;grid-template-columns:290px 1fr;gap:20px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
+.kpi small,.res small{color:var(--mu);display:block}.kpi b{font-size:30px}
+.painel,.linha{display:grid;gap:12px;align-content:start}
+.linha{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));align-items:end}
+label{display:grid;gap:4px;color:var(--mu);font-size:13px}
+select,input{background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:9px;font:inherit;color-scheme:dark}
+.btn{background:var(--az);color:#fff;border:0;border-radius:8px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{filter:brightness(1.15)}.btn.sec{background:var(--sup2);border:1px solid var(--bd)}
+.mapwrap{padding:0;overflow:hidden;min-height:380px}#mapa{height:100%;min-height:380px}.mapa-s{height:300px;border-radius:8px}
+.cv{position:relative;height:240px;margin-top:12px}
+.lista{display:grid;gap:8px}.item{display:grid;background:var(--sup2);border-radius:8px;padding:10px 12px;text-decoration:none;color:var(--tx)}.item span{color:var(--mu);font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips a{background:var(--sup2);border:1px solid var(--bd);border-radius:99px;padding:6px 14px;text-decoration:none;color:var(--tx)}.chips a:hover{border-color:var(--az)}
+.tag{font-style:normal;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px}
+.tag.demo{background:rgba(245,158,11,.15);color:var(--am)}.tag.ok{background:rgba(34,197,94,.15);color:var(--vd)}
+.aviso{background:rgba(37,99,235,.1);border:1px solid var(--az);border-radius:10px;padding:10px 14px;font-size:13px}
+.res{display:flex;gap:24px;flex-wrap:wrap}.res b{font-size:20px}.res .pos{color:var(--vd)}
+.nota{color:var(--mu);font-size:13px;margin-top:10px}
+.spin{display:inline-block;width:12px;height:12px;border:2px solid var(--bd);border-top-color:var(--az);border-radius:50%;animation:g 1s linear infinite}@keyframes g{to{transform:rotate(360deg)}}
+.linha-t{display:flex;justify-content:space-between;align-items:center}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--bd);white-space:nowrap}th{color:var(--mu);font-weight:600}
+@media(max-width:860px){.shell{grid-template-columns:1fr}.nav{position:static;height:auto;flex-direction:row;overflow-x:auto;padding:10px}.logo{padding:8px 10px}.nav a{white-space:nowrap}.grid2,.grid-map{grid-template-columns:1fr}main,.topo{padding:16px}}
+@media print{.nav,.btn,.topo .tag{display:none}.shell{display:block}body{background:#fff;color:#000}.card{border-color:#ccc;background:#fff}}
+
+.item b{word-break:break-all}
+.res small{max-width:140px}
